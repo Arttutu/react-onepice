@@ -1,10 +1,11 @@
-import CampoTexto from '../CampoTexto'
+
+import CampoTexto from '../CampoTexto/CampoText'
 import './Formulario.css'
 
 const Formulario = () => {
     return (
         <section className="formulario">
-            <div class ="container">
+            <div className="container">
                 <form>
                     <h2>Preencha os dados para criar o card da tripulação</h2>
                     <CampoTexto label="Nome" placeholder="Digite seu nome" />
