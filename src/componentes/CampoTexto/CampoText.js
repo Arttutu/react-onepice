@@ -3,9 +3,9 @@ import './CampoTexto.css'
 const CampoTexto = (props) => {
     const placeholderModificada = `${props.placeholder}...` 
     return (
-        <div >
+        <div className='texto mt-3'>
             <label className="form-label">{props.label}</label>
-            <input type="text" className="form-control" placeholder = {placeholderModificada}/>
+            <input type="text"  placeholder = {placeholderModificada}/>
         </div>
     )
 }

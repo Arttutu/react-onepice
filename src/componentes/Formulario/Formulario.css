@@ -1,0 +1,10 @@
+.container{
+    background-color: #e2e1e1;
+    border-radius: 10px;
+    box-shadow: 2px 2px 100px rgb(0,0,0 ,0.1    );
+}
+.container input{
+    padding: 10px;
+    box-shadow: 2px 2px 2px rgb(0,0,0 ,0.06);
+    border: none;
+}

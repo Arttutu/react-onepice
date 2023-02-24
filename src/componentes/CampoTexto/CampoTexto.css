@@ -1,0 +1,8 @@
+.texto{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.texto label{
+    font-weight: bold;
+}
