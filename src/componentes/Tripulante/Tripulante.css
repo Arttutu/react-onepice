@@ -1,0 +1,31 @@
+.Tripulante {
+  width: 280px;
+  background-color: white;
+  border-radius: 10px;
+  width: auto;
+}
+.Tripulante .cabecalho {
+  padding: 12px;
+  background-color: rgba(195, 195, 195, 0.532);
+  border-radius: 10px 10px 0px 0px;
+}
+.rodape {
+  padding: 12px;
+  padding-top: 90px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 0px 0px 10px 10px;
+}
+.Tripulante img {
+  position: relative;
+  bottom: -70px;
+  width: 240px;
+  padding: 24px;
+  border-radius: 50%;
+}
+.Tripulante h4 {
+  color: rgb(95, 95, 175);
+  font: 24px bolder;
+}
+.tripulante h5 {
+  font: 18px bolder;
+}

@@ -5,12 +5,6 @@ import Botao from "../Botao/Botao"
 import "./Formulario.css"
 
 const Formulario = (props) => {
-  const times = [
-    "Chapeus de palha",
-    "Piratas da Fera",
-    "Piratas do ruivo",
-    "piratas do coração",
-  ]
   // (valor, local que guarda)
   const [nome, setNome] = useState("")
   const [cargo, setCargo] = useState("")
@@ -27,7 +21,7 @@ const Formulario = (props) => {
     })
   }
   return (
-    <section className="formulario">
+    <section className="formulario mb-5">
       <div className="container mt-5 p-5">
         <form onSubmit={aoSalvar}>
           <h2 className="text-center mb-5">
@@ -56,7 +50,7 @@ const Formulario = (props) => {
           <ListaSuspensa
             obrigatorio={true}
             label="tripulação"
-            itens={times}
+            itens={props.nomeTripulacao}
             valor={tripulacao}
             aoAlterado={(valor) => setTripulacao(valor)}
           />
