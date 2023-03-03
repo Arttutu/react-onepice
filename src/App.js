@@ -27,7 +27,7 @@ function App() {
       corSecundaria: "#66580B",
     },
   ]
-
+  const [tripulacao, setTripulacao] = useState([])
   const aoNovoColobaradorAdicionado = (tripulacao) => {
     console.log(tripulacao)
   }

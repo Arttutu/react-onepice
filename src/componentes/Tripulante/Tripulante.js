@@ -4,7 +4,7 @@ const Tripulante = (props) => {
     <div className="Tripulante">
       <div className="cabecalho">
         <img
-          class="img-fluid"
+          className="img-fluid"
           src="https://github.com/Arttutu.png"
           alt="Arthur"
         ></img>
