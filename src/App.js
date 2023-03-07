@@ -7,7 +7,7 @@ import { useState } from "react"
 function App() {
   const piratas = [
     {
-      nome: "Chapeus de palha",
+      nome: "Chapeus de Palha",
       corPrimaria: "#660300",
       corSecundaria: "#e60800",
     },
@@ -17,19 +17,20 @@ function App() {
       corSecundaria: "#003166",
     },
     {
-      nome: "Piratas da bigMom",
+      nome: "Piratas da BigMom",
       corPrimaria: "#EA46A0",
       corSecundaria: "#E6007E",
     },
     {
-      nome: "piratas do coração",
+      nome: "piratas do Coração",
       corPrimaria: "#EAD146",
       corSecundaria: "#66580B",
     },
   ]
-  const [tripulacao, setTripulacao] = useState([])
+
+  const [tripulante, setTripulante] = useState([])
   const aoNovoColobaradorAdicionado = (tripulacao) => {
-    console.log(tripulacao)
+    setTripulante([...tripulante, tripulacao])
   }
   return (
     <div className="App">
@@ -46,6 +47,9 @@ function App() {
           nome={piratas.nome}
           corPrimaria={piratas.corPrimaria}
           corSecundaria={piratas.corSecundaria}
+          tripulante={tripulante.filter(
+            (tripulante) => tripulante.tripulacao === piratas.nome
+          )}
         />
       ))}
     </div>

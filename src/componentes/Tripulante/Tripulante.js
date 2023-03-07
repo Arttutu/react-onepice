@@ -1,17 +1,13 @@
 import "./Tripulante.css"
-const Tripulante = (props) => {
+const Tripulante = ({ nome, imagem, cargo, corFundo }) => {
   return (
     <div className="Tripulante">
-      <div className="cabecalho">
-        <img
-          className="img-fluid"
-          src="https://github.com/Arttutu.png"
-          alt="Arthur"
-        ></img>
+      <div className="cabecalho" style={{ backgroundColor: corFundo }}>
+        <img className="img-fluid" src={imagem} alt={nome}></img>
       </div>
       <div className="rodape">
-        <h4>Luffy</h4>
-        <h5>Capitão dos chapéus de Palha</h5>
+        <h4>{nome}</h4>
+        <h5>{cargo}</h5>
       </div>
     </div>
   )

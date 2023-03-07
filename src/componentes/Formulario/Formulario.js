@@ -19,6 +19,10 @@ const Formulario = (props) => {
       imagem,
       tripulacao,
     })
+    setNome("")
+    setCargo("")
+    setImagem("")
+    setTripulacao("")
   }
   return (
     <section className="formulario mb-5">
