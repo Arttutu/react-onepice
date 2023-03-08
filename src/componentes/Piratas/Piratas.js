@@ -3,8 +3,7 @@ import "./Piratas.css"
 const piratas = (props) => {
   return (
     // rederização condicional com react
-
-    props.tripulante.length > 0 ? (
+    props.tripulante.length > 0 && (
       <section className="piratas text-center">
         <div
           className="container"
@@ -27,8 +26,6 @@ const piratas = (props) => {
           </div>
         </div>
       </section>
-    ) : (
-      ""
     )
   )
 }

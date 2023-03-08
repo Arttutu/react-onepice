@@ -30,6 +30,7 @@ function App() {
 
   const [tripulante, setTripulante] = useState([])
   const aoNovoColobaradorAdicionado = (tripulacao) => {
+    debugger
     setTripulante([...tripulante, tripulacao])
   }
   return (
