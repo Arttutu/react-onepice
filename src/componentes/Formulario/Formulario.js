@@ -4,7 +4,7 @@ import { useState } from "react"
 import Botao from "../Botao/Botao"
 import "./Formulario.css"
 
-const Formulario = (props) => {
+const Formulario = (props, piratas) => {
   // (valor, local que guarda)
   const [nome, setNome] = useState("")
   const [cargo, setCargo] = useState("")

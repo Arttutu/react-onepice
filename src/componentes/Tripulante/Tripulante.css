@@ -1,8 +1,7 @@
 .Tripulante {
-  width: 280px;
+  width: auto;
   background-color: white;
   border-radius: 10px;
-  width: auto;
 }
 .Tripulante .cabecalho {
   padding: 12px;
@@ -18,7 +17,8 @@
 .Tripulante img {
   position: relative;
   bottom: -70px;
-  width: 240px;
+  width: 300px;
+  height: 250px;
   padding: 24px;
   border-radius: 50%;
 }

@@ -1,6 +1,6 @@
 import Tripulante from "../Tripulante/Tripulante"
 import "./Piratas.css"
-const piratas = (props) => {
+const piratas = (props, tripulante) => {
   return (
     // rederização condicional com react
     props.tripulante.length > 0 && (
@@ -12,14 +12,14 @@ const piratas = (props) => {
           <h3 style={{ borderColor: props.corSecundaria }}>{props.nome}</h3>
 
           <div className="row piratasTime">
-            {props.tripulante.map((tripulante) => (
-              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4 text-center">
+            {props.tripulante.map((tripulante, indice) => (
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4 text-center">
                 <Tripulante
                   corFundo={props.corSecundaria}
-                  key={tripulante.nome}
+                  key={indice}
                   nome={tripulante.nome}
                   cargo={tripulante.cargo}
-                  imagem={tripulante.cargo}
+                  imagem={tripulante.imagem}
                 />
               </div>
             ))}
