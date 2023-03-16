@@ -1,4 +1,5 @@
 .Tripulante {
+  position: relative;
   width: auto;
   background-color: white;
   border-radius: 10px;
@@ -28,4 +29,9 @@
 }
 .tripulante h5 {
   font: 18px bolder;
+}
+.deletar {
+  position: absolute;
+  right: -10px;
+  top: -10px;
 }

@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { useState } from "react"
 
 function App() {
-  const piratas = [
+  const [piratas, setPiratas] = useState([
     {
       nome: "Chapeus de Palha",
       corPrimaria: "#660300",
@@ -26,7 +26,7 @@ function App() {
       corPrimaria: "#EAD146",
       corSecundaria: "#66580B",
     },
-  ]
+  ])
   const inicial = [
     {
       nome: "Luffy",
@@ -113,6 +113,9 @@ function App() {
     {},
   ]
   const [tripulante, setTripulante] = useState(inicial)
+  function deletarTripulante() {
+    return console.log("deletando colaborador")
+  }
   return (
     <div className="App">
       <Banner />
@@ -132,6 +135,7 @@ function App() {
             tripulante={tripulante.filter(
               (tripulante) => tripulante.tripulacao === piratas.nome
             )}
+            aoDeletar={deletarTripulante}
           />
         ))}
       </section>
