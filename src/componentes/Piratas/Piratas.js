@@ -1,5 +1,6 @@
 import Tripulante from "../Tripulante/Tripulante"
 import "./Piratas.css"
+import hexToRgba from "hex-to-rgba"
 const piratas = (props) => {
   return (
     // rederização condicional com react
@@ -7,20 +8,23 @@ const piratas = (props) => {
       <section className="piratas text-center">
         <div
           className="container"
-          style={{ backgroundColor: props.corPrimaria }}
+          style={{ backgroundColor: hexToRgba(props.cor, "0.6") }}
         >
           <div className="row">
             <div className="col text-end mb-3">
               <input
-                value={props.corSecundaria}
+                value={props.cor}
                 type="color"
                 className="input-color"
+                onChange={(evento) =>
+                  props.mudarCor(evento.target.value, props.nome)
+                }
               ></input>
             </div>
           </div>
           <div className="row">
             <div className="col text-center mb-5">
-              <h3 style={{ borderColor: props.corSecundaria }}>{props.nome}</h3>
+              <h3 style={{ borderColor: props.cor }}>{props.nome}</h3>
             </div>
           </div>
 
@@ -29,7 +33,7 @@ const piratas = (props) => {
               return (
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4 text-center">
                   <Tripulante
-                    corFundo={props.corSecundaria}
+                    corFundo={props.cor}
                     key={indice}
                     nome={tripulante.nome}
                     cargo={tripulante.cargo}

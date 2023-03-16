@@ -8,23 +8,19 @@ function App() {
   const [piratas, setPiratas] = useState([
     {
       nome: "Chapeus de Palha",
-      corPrimaria: "#660300",
-      corSecundaria: "#e60800",
+      cor: "#e60800",
     },
     {
       nome: "Piratas da Fera",
-      corPrimaria: "#4695EA",
-      corSecundaria: "#003166",
+      cor: "#003166",
     },
     {
       nome: "Piratas da BigMom",
-      corPrimaria: "#EA46A0",
-      corSecundaria: "#E6007E",
+      cor: "#E6007E",
     },
     {
-      nome: "piratas do Coração",
-      corPrimaria: "#EAD146",
-      corSecundaria: "#66580B",
+      nome: "Piratas do Coração",
+      cor: "#66580B",
     },
   ])
   const inicial = [
@@ -116,6 +112,16 @@ function App() {
   function deletarTripulante() {
     return console.log("deletando colaborador")
   }
+  function mudarCorDoTime(cor, nome) {
+    setPiratas(
+      piratas.map((piratas) => {
+        if (piratas.nome === nome) {
+          piratas.cor = cor
+        }
+        return piratas
+      })
+    )
+  }
   return (
     <div className="App">
       <Banner />
@@ -130,12 +136,12 @@ function App() {
           <Piratas
             key={indice}
             nome={piratas.nome}
-            corPrimaria={piratas.corPrimaria}
-            corSecundaria={piratas.corSecundaria}
+            cor={piratas.cor}
             tripulante={tripulante.filter(
               (tripulante) => tripulante.tripulacao === piratas.nome
             )}
             aoDeletar={deletarTripulante}
+            mudarCor={mudarCorDoTime}
           />
         ))}
       </section>
