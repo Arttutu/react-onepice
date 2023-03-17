@@ -10,6 +10,8 @@ const Formulario = (props, piratas) => {
   const [cargo, setCargo] = useState("")
   const [imagem, setImagem] = useState("")
   const [tripulacao, setTripulacao] = useState("")
+  const [nomePiratas, setnomePiratas] = useState("")
+  const [CorPirata, setCorPirata] = useState("")
 
   const aoSalvar = (e) => {
     e.preventDefault()
@@ -32,14 +34,14 @@ const Formulario = (props, piratas) => {
             Preencha os dados para criar o card da tripulação
           </h2>
           <CampoTexto
-            obrigatorio={true}
+            obrigatorio
             label="Nome"
             placeholder="Digite seu nome"
             valor={nome}
             aoAlterado={(valor) => setNome(valor)}
           />
           <CampoTexto
-            obrigatorio={true}
+            obrigatorio
             label="Cargo"
             placeholder="Digite seu cargo"
             valor={cargo}
@@ -52,13 +54,38 @@ const Formulario = (props, piratas) => {
             aoAlterado={(valor) => setImagem(valor)}
           />
           <ListaSuspensa
-            obrigatorio={true}
+            obrigatorio
             label="tripulação"
             itens={props.nomeTripulacao}
             valor={tripulacao}
             aoAlterado={(valor) => setTripulacao(valor)}
           />
           <Botao> Criar card</Botao>
+        </form>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault()
+            props.cadastrarPiratas({ nome: nomePiratas, cor: CorPirata })
+          }}
+        >
+          <h2 className="text-center mb-5 mt-5">
+            Preencha os dados para criar um Novo Time
+          </h2>
+          <CampoTexto
+            obrigatorio
+            label="Nome"
+            placeholder="Digite o nome do time"
+            valor={nomePiratas}
+            aoAlterado={(valor) => setnomePiratas(valor)}
+          />
+          <CampoTexto
+            obrigatorio
+            label="Cor"
+            placeholder="Digite a cor do time"
+            valor={CorPirata}
+            aoAlterado={(valor) => setCorPirata(valor)}
+          />
+          <Botao> Criar um novo time</Botao>
         </form>
       </div>
     </section>

@@ -17,7 +17,7 @@ const piratas = (props) => {
                 type="color"
                 className="input-color"
                 onChange={(evento) =>
-                  props.mudarCor(evento.target.value, props.nome)
+                  props.mudarCor(evento.target.value, props.id)
                 }
               ></input>
             </div>
@@ -35,6 +35,7 @@ const piratas = (props) => {
                   <Tripulante
                     corFundo={props.cor}
                     key={indice}
+                    tripulante={tripulante}
                     nome={tripulante.nome}
                     cargo={tripulante.cargo}
                     imagem={tripulante.imagem}
