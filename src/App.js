@@ -127,7 +127,7 @@ function App() {
   ]
   const [tripulante, setTripulante] = useState(inicial)
   function deletarTripulante(id) {
-    setTripulante(tripulante.filter((tripulante) => tripulante.id != id))
+    setTripulante(tripulante.filter((tripulante) => tripulante.id !== id))
   }
   function mudarCorDoTime(cor, id) {
     setPiratas(
