@@ -40,6 +40,7 @@ const piratas = (props) => {
                     cargo={tripulante.cargo}
                     imagem={tripulante.imagem}
                     aoDeletar={props.aoDeletar}
+                    aoFavoritar={props.aoFavoritar}
                   />
                 </div>
               )
